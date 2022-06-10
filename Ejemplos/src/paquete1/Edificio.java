@@ -33,9 +33,10 @@ public class Edificio {
         return costo;
     }  
     
+    @Override
     public String toString() {
-        String cadena = String.format("Edificio de nombre %s ", nombre
-                + "\nEl costo del edificio es %.2f", obtenerCosto());
+        String cadena = String.format("Edificio de nombre %s\n\t ", nombre
+                + "El costo del edificio es %.2f", obtenerCosto());
         return cadena;               
     }
 }

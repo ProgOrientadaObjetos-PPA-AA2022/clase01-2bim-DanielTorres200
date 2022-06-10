@@ -24,7 +24,7 @@ public class Vehiculo {
     }
     
     public void establecerMatricula(String v){
-        tipo = v;
+        matricula = v;
     }
     
     public void establecerValor(double v){

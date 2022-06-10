@@ -8,6 +8,7 @@ package paquete2;
 import paquete1.Edificio;
 import paquete1.Empresa;
 import paquete1.Vehiculo;
+
 /**
  *
  * @author reroes
@@ -30,31 +31,32 @@ public class Ejecutor {
         edf4.establecerCostos(5000);
         
         
-        
+
         Vehiculo ve1 = new Vehiculo("Auto");
         ve1.establecerMatricula("LBB0011");
         ve1.establecerValor(10000);
 
-        Edificio ve2 = new Edificio("Camioneta");
-        ve1.establecerMatricula("LCB0011");
-        ve2.establecerCostos(20000);
+        Vehiculo ve2 = new Vehiculo("Camioneta");
+        ve2.establecerMatricula("LCB0011");
+        ve2.establecerValor(20000);
 
-        Edificio ve3 = new Edificio("Auto");
-        ve1.establecerMatricula("LBD0011");
-        ve3.establecerCostos(6000);
+        Vehiculo ve3 = new Vehiculo("Auto");
+        ve3.establecerMatricula("LBD0011");
+        ve3.establecerValor(6000);
 
-        Edificio ve4 = new Edificio("Camioneta");
-        ve1.establecerMatricula("LC0011");
-        ve4.establecerCostos(10000);
-        
-        Edificio ve5 = new Edificio("Camioneta");
-        ve1.establecerMatricula("LBB0011");
-        ve5.establecerCostos(25000);
+        Vehiculo ve4 = new Vehiculo("Camioneta");
+        ve4.establecerMatricula("LCC011");
+        ve4.establecerValor(10000);
+
+        Vehiculo ve5 = new Vehiculo("Camioneta");
+        ve5.establecerMatricula("LDC0011");
+        ve5.establecerValor(25000);
 
         Edificio[] listaEdificios = {edf1, edf2, edf3, edf4};
+        Vehiculo[] listaVehiculos = {ve1, ve2, ve3, ve4, ve5};
+
         //double c = listaEdificios[2].obtenerCosto();
         //System.out.println(c);
-
         // Crear un objeto de tipo Empresa:
         //  Nombre: Empresa de Hojas
         //  Lista de edificio: edf1, edf2, edf3, edf4
@@ -62,8 +64,10 @@ public class Ejecutor {
         miempresa.establecerNombre("Empresa de Hojas");
         miempresa.establecerEdificios(listaEdificios);
         miempresa.establecerCostoBienesInmuebles();
+        miempresa.establecerVehiculos(listaVehiculos);
+        miempresa.establecerCostoVehiculos();
+        miempresa.establecerCostoBienes();
         // Imprimir el costo de los bienes inmuebles de la empresa
-        
         //System.out.printf("%.2f\n", miempresa.obtenerCostoBienesInmuebles());
         System.out.printf("%s\n", miempresa);
     }
